@@ -1,0 +1,8 @@
+<?link rel="stylesheet" type="text/css" href="/gantt/dhtmlxgantt.css"?>
+<?script type="text/javascript" src="/gantt/dhtmlxgantt.js"?>
+<?script src="/gantt/GanttDiv.js"?>
+<zk xmlns:w="client">
+	<window title="Dhtml Gantt Integration" border="normal" vflex="1" apply="org.zkoss.sample.GanttComposer">
+		<div id="gantt" vflex="1" w:use="zul.wgt.GanttDiv"></div>
+	</window>
+</zk>
