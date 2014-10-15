@@ -95,8 +95,12 @@ public class GanttComposer extends SelectorComposer<Component> {
 			else if (p instanceof Double)
 				progress = (Double) p;
 			task.setProgress(progress);
-			task.setSortOrder((Integer) obj.get("sortorder"));
-			task.setOpen((Boolean) obj.get("open"));
+			Object sortorder = obj.get("sortorder");
+			if (sortorder != null)
+				task.setSortOrder((Integer) sortorder);
+			Object open = obj.get("open");
+			if (open != null)
+				task.setOpen((Boolean) obj.get("open"));
 		}
 		//store to DB
 		taskList.set(index, task);
